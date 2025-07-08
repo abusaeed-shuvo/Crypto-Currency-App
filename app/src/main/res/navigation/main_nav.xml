@@ -22,5 +22,8 @@
 		<action
 			android:id = "@+id/action_coinDetailsFragment_to_coinListFragment"
 			app:destination = "@id/coinListFragment" />
+		<argument
+			android:name = "coinId"
+			app:argType = "string" />
 	</fragment>
 </navigation>

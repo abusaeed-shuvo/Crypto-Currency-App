@@ -7,10 +7,9 @@ import com.github.abusaeed_shuvo.cryptocurrencyapp.domain.repository.CoinReposit
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
-import javax.inject.Inject
 
 
-class GetCoinsUseCase @Inject constructor(
+class GetCoinsUseCase(
 	private val repository: CoinRepository
 ) {
 	operator fun invoke() = flow {

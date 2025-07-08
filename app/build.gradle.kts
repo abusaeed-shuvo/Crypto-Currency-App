@@ -4,7 +4,7 @@ plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.kotlin.android)
 	alias(libs.plugins.google.ksp)
-	alias(libs.plugins.dagger.hilt.android)
+	alias(libs.plugins.kotlin.safeargs)
 }
 
 android {
@@ -58,14 +58,8 @@ dependencies {
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)
+	implementation(libs.androidx.navigation.dynamic.features.fragment)
 
-
-	//Hilt core
-	implementation(libs.hilt.android)
-	ksp(libs.androidx.hilt.compiler)
-
-	implementation(libs.androidx.hilt.navigation.fragment)
-	ksp(libs.hilt.compiler)
 
 	implementation(libs.retrofit)
 	implementation(libs.retrofit.converter.gson)

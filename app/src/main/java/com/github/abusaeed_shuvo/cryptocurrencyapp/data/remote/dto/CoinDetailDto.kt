@@ -17,8 +17,8 @@ data class CoinDetailDto(
 	@SerialName("hash_algorithm")
 	val hashAlgorithm: String,
 	val id: String,
-	@SerialName("is_active")
-	val isActive: Boolean,
+
+	val is_active: Boolean,
 	@SerialName("is_new")
 	val isNew: Boolean,
 	@SerialName("last_data_at")
@@ -52,8 +52,8 @@ fun CoinDetailDto.toCoinDetail(): CoinDetail {
 		description = description,
 		symbol = symbol,
 		rank = rank,
-		isActive = isActive,
-		tags = tags.map { it.name },
+		isActive = is_active,
+		tags = tags,
 		team = team
 	)
 }

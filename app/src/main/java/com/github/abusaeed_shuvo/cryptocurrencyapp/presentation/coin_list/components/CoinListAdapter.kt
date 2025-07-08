@@ -45,6 +45,9 @@ class CoinListAdapter(
 					)
 				)
 			}
+			root.setOnClickListener {
+				onItemClick(coin)
+			}
 		}
 	}
 
